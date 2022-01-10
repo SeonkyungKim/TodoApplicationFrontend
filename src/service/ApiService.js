@@ -17,8 +17,8 @@ export function call(api, method, request) {
         headers: headers,
         url: API_BASE_URL + api,
         method: method,
+        mode: 'cors',
     };
-
     if (request) {
         // GET method
         options.body = JSON.stringify(request);
